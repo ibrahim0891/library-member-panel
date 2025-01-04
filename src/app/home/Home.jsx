@@ -23,11 +23,11 @@ export default function Home() {
                 <div>Loading...</div>
             ) : (
                 <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-8">
+                    <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-2 gap-6 p-8">
                         {books.books.map((book) => {
                             return <Link key={book._id} to={`/book/${book._id}`} className="transform hover:scale-105 transition-transform duration-300">
                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                    <div className="relative h-64">
+                                    <div className="relative aspect-[3/4]">
                                         <img src={book.coverImage ||  'https://www.picmaker.com/assets/images/bookcovermaker/template-1.png'} alt={book.title} className="w-full h-full object-cover" />
                                         <div className="absolute top-2 right-2 flex items-center space-x-1">
                                             <span className="inline-flex items-center bg-white/90 rounded-full px-2 py-1 text-sm">

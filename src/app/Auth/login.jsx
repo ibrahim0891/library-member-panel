@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [formData, setFormData] = useState({
-        email: 'ibrahim@gmail.com',
-        password: '123',
+        email: '',
+        password: '',
     });
     const [error, setError] = useState(null);
     const navigate = useNavigate();
@@ -40,7 +40,7 @@ const Login = () => {
                             <input
                                 type="email"
                                 placeholder="Email"
-                                value={'ibrahim@gmail.com'}
+                                value={formData.email}
                                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             />
@@ -52,7 +52,7 @@ const Login = () => {
                             <input
                                 type="password"
                                 placeholder="Password"
-                                value={'123'}
+                                value={formData.password}
                                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                             />
